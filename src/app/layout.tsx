@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import { Header } from './components/header'
 import './globals.css'
 
@@ -29,7 +30,7 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
-        <main className="h-screen px-4 bg-stone-200">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   )

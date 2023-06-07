@@ -1,7 +1,11 @@
+'use client'
+
+import { Cover } from './components/cover'
+
 export default function Home() {
   return (
-    <div>
-      <h1>Hello, world!</h1>
+    <div className="h-screen p-4 bg-stone-200">
+      <Cover />
     </div>
   )
 }

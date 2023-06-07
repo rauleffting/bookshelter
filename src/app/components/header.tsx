@@ -30,7 +30,7 @@ export function Header() {
 
   return (
     <header className="flex justify-between items-center h-16 px-2 bg-stone-950 relative">
-      <h4 className="flex text-base text-amber-400 pr-2">
+      <h4 className="flex text-lg text-amber-400 pr-2">
         <span className="text-white">Book</span>
         Shelter
       </h4>
@@ -38,9 +38,9 @@ export function Header() {
         <input
           type="text"
           placeholder="Search"
-          className="flex pl-2 h-6 rounded-tl-md rounded-bl-md text-stone-950 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:h-5"
+          className="flex pl-2 h-6 rounded-tl rounded-bl text-stone-950 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:h-5"
         />
-        <div className="flex h-6 p-2 items-center justify-center rounded-tr-md rounded-br-md bg-amber-400 cursor-pointer hover:bg-amber-500">
+        <div className="flex h-6 p-2 items-center justify-center rounded-tr rounded-br bg-amber-400 cursor-pointer hover:bg-amber-500">
           <MagnifyingGlass size={20} className="text-stone-950" />
         </div>
       </div>
