@@ -1,11 +1,13 @@
 'use client'
 
 import { Cover } from './components/cover'
+import { Section } from './components/section'
 
 export default function Home() {
   return (
-    <div className="h-screen p-4 bg-stone-200">
+    <div className="h-screen p-2 bg-stone-200">
       <Cover />
+      <Section />
     </div>
   )
 }
