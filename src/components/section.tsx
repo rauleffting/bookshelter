@@ -1,3 +1,5 @@
+'use client'
+
 import {} from '@phosphor-icons/react'
 import { useState } from 'react'
 import { BookCard } from './bookCard'

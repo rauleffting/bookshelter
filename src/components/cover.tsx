@@ -1,3 +1,4 @@
+'use client'
 import { ShoppingCart, Rocket } from '@phosphor-icons/react'
 
 export function Cover() {

@@ -1,7 +1,6 @@
-'use client'
-
+import { Footer } from '@/components/footer'
 import React from 'react'
-import { Header } from './components/header'
+import { Header } from '../components/header'
 import './globals.css'
 
 export const metadata = {
@@ -28,9 +27,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>
+      <body className="h-screen">
         <Header />
-        <main>{children}</main>
+        <main className="px-4 py-2 pt-20 bg-stone-200">{children}</main>
+        <Footer />
       </body>
     </html>
   )
