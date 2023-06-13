@@ -1,6 +1,7 @@
 'use client'
 
 import { List, MagnifyingGlass } from '@phosphor-icons/react'
+import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 import { DropdownMenu } from './dropdownMenu'
 
@@ -32,10 +33,13 @@ export function Header() {
 
   return (
     <header className="flex justify-between items-center h-16 px-4 bg-stone-950 fixed w-full">
-      <h4 className="flex text-lg text-amber-400 pr-2">
-        <span className="text-white">Book</span>
-        Shelter
-      </h4>
+      <Link href="/">
+        <h4 className="flex text-lg text-amber-400 pr-2">
+          <span className="text-white">Book</span>
+          Shelter
+        </h4>
+      </Link>
+
       <div className="flex items-center justify-center flex-grow">
         <input
           type="text"

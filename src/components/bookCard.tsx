@@ -16,7 +16,7 @@ interface Book {
 
 export function BookCard({ book }: { book: Book }) {
   return (
-    <div className="flex text-stone-950 mt-8 mb-8">
+    <div className="flex text-stone-950 my-8">
       <Image src={book.book_cover} alt="book cover" width={150} height={210} />
       <div className="flex flex-col ml-8">
         <Link key={`${book.id}`} href={`/book/${book.id}`} prefetch={false}>
