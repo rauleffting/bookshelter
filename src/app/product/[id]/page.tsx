@@ -1,16 +1,15 @@
-'use client'
+import Image from 'next/image'
+import { Book } from '../../../types/types'
+import bookCover from '../../../assets/book_cover.jpg'
+import bookCover2 from '../../../assets/book_cover2.jpg'
 
-import {} from '@phosphor-icons/react'
-import { useState } from 'react'
-import { BookCard } from './bookCard'
-import bookCover from '../assets/book_cover.jpg'
-import bookCover2 from '../assets/book_cover2.jpg'
+interface ProductProps {
+  params: {
+    id: string
+  }
+}
 
-import { Book } from '../types/types'
-
-export function Section() {
-  const [category, setCategory] = useState<string>('')
-
+export default function Product({ params }: ProductProps) {
   const books: Book[] = [
     {
       id: 1,
@@ -42,28 +41,21 @@ export function Section() {
     },
   ]
 
+  const filteredBooks = books.filter(
+    (book) => Number(book.id) === Number(params.id),
+  )
+  const selectedBook: Book = filteredBooks[0]
+
   return (
-    <div className="bg-stone-100 rounded my-4 p-4">
-      <div className="flex justify-between items-center space-y-1">
-        <h1 className="text-stone-950 text-3xl font-bold">Books</h1>
-
-        <select
-          name="category"
-          onChange={(event) => setCategory(event.target.value)}
-          className="bg-stone-200 text-stone-950 p-1 mb-4 w-40 rounded hover:cursor-pointer "
-        >
-          <option value="">All</option>
-          <option value="philosophy">Philosophy</option>
-          <option value="religion">Religion</option>
-          <option value="literature">Literature</option>
-          <option value="history">History</option>
-        </select>
-      </div>
-
+    <div className="flex">
       <div>
-        {books.map((book) => {
-          return <BookCard book={book} key={book.id} />
-        })}
+        <Image src={selectedBook.book_cover} alt="book cover" />
+      </div>
+      <div>
+        <h1>{selectedBook.title}</h1>
+        <p>{selectedBook.description}</p>
+        <span>{selectedBook.price}</span>
+        <button>Add to cart</button>
       </div>
     </div>
   )

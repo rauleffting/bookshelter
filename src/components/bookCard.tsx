@@ -19,7 +19,7 @@ export function BookCard({ book }: { book: Book }) {
     <div className="flex text-stone-950 my-8">
       <Image src={book.book_cover} alt="book cover" width={150} height={210} />
       <div className="flex flex-col ml-8">
-        <Link key={`${book.id}`} href={`/book/${book.id}`} prefetch={false}>
+        <Link key={`${book.id}`} href={`/product/${book.id}`} prefetch={false}>
           <h1 className="mb-2 text-2xl font-bold hover:cursor-pointer hover:text-amber-600 hover:underline">
             {book.title}
           </h1>
